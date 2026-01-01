@@ -1,0 +1,27 @@
+# Ignore files inside .vscode-server
+.vscode-server/
+
+# Ignore everything inside src
+ws/src/*
+
+# Keep the src directory itself
+!ws/src/
+
+# Ignore auto-generated files and folders
+.bash_history
+.bashrc
+.cache/
+.config/
+.dotnet/
+.gitconfig
+.gnupg/
+.local/
+.profile
+.ros/
+.rviz/
+.ssh/
+
+# Ignore temp files
+.devcontainer/.onCreateCommandMarker
+.devcontainer/.postCreateCommandMarker
+.devcontainer/.updateContentCommandMarker
