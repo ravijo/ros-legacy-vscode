@@ -1,2 +1,3 @@
-# ros
-VS Code support for Docker-based legacy ROS (Ubuntu &lt; 20.04).
+# ros-legacy-vscode
+
+This repository provides VS Code support for Docker containers running legacy ROS distributions on Ubuntu versions earlier than 20.04.
