@@ -1,5 +1,8 @@
 # Ignore files inside .vscode-server
-.vscode-server/
+.vscode-server/*
+
+# Keep the .vscode-server directory itself
+!.vscode-server/
 
 # Ignore everything inside src
 ws/src/*
