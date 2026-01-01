@@ -1,14 +1,14 @@
 # Ignore files inside .vscode-server
 .vscode-server/*
 
-# Keep the .vscode-server directory itself
-!.vscode-server/
+# But keep the .gitkeep file to preserve the directory structure
+!.vscode-server/.gitkeep
 
-# Ignore everything inside src
+# Ignore everything inside ws/src
 ws/src/*
 
-# Keep the src directory itself
-!ws/src/
+# But keep the .gitkeep file to preserve the directory structure
+!ws/src/.gitkeep
 
 # Ignore auto-generated files and folders
 .bash_history
