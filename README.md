@@ -1,6 +1,6 @@
 # ros-legacy-vscode
 
-This repository provides VS Code support for Docker containers running legacy ROS distributions on Ubuntu versions earlier than 20.04.
+This repository provides VS Code support for Docker containers running legacy ROS distributions (ROS Melodic as an example) on Ubuntu versions earlier than 20.04.
 
 ## Installation
 
@@ -67,7 +67,9 @@ Open the project inside VS Code and select "Reopen in Container"
 
 ## Environment
 
-This template has been tested on:
+This repository has been tested on:
+
+### Host PC
 
 | Component | Version                      |
 |-----------|------------------------------|
@@ -77,10 +79,17 @@ This template has been tested on:
 | Docker    | 29.1.3                       |
 | VS Code   | 1.107.1                      |
 
+### Guest PC
+
+| Component | Version                      |
+|-----------|------------------------------|
+| OS        | Ubuntu 18.04.3 LTS (64-bit)  |
+| ROS       | Melodic                      |
+
 
 ### VS Code Extensions
 
-Below is the version information of the extensions used in VS Code:
+Below is the version information of the extensions installed on Host PC in VS Code:
 
 ```bash
 $ code --list-extensions --show-versions
