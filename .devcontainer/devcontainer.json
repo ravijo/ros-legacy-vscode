@@ -1,0 +1,65 @@
+{
+    "name": "melodic",
+    "privileged": true,
+    "remoteUser": "ros",
+
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "USERNAME": "ros"
+        }
+    },
+
+    "workspaceFolder": "/home/ros",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/home/ros,type=bind",
+
+    "features": {
+        "ghcr.io/devcontainers/features/common-utils:2.5.5": {
+            "installZsh": true,
+            "configureZshAsDefaultShell": false
+        }
+    },
+
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "remote.SSH.forwardAgent": true,
+                "git.autoRepositoryDetection": true,
+                "terminal.integrated.defaultProfile.linux": "bash",
+                "terminal.integrated.profiles.linux": {
+                  "bash": {
+                    "path": "/bin/bash",
+                    "args": ["-l"]
+                  }
+                }
+            },
+            "extensions": [
+                "ms-vscode.cpptools",
+                "ms-vscode.cpptools-themes",
+                "ms-python.python",
+                "twxs.cmake",
+                "eamodio.gitlens"
+            ]
+        }
+    },
+
+    "containerEnv": {
+        "DISPLAY": "unix:0"
+    },
+
+    "runArgs": [
+        "--net=host",
+        "--pid=host",
+        "--ipc=host",
+        "-e", "DISPLAY=${env:DISPLAY}",
+        "-e", "XAUTHORITY=/tmp/.Xauthority"
+    ],
+
+    "mounts": [
+        "source=${localEnv:XAUTHORITY},target=/tmp/.Xauthority,type=bind,consistency=cached",
+        "source=/tmp/.X11-unix,target=/tmp/.X11-unix,type=bind,consistency=cached",
+        "source=/dev/dri,target=/dev/dri,type=bind,consistency=cached"
+    ],
+
+    "postCreateCommand": "bash -c 'test -f /home/ros/.bashrc || cp /etc/skel/.bashrc /home/ros/.bashrc && test -f /home/ros/.profile || cp /etc/skel/.profile /home/ros/.profile && sudo chown -R ros:ros /home/ros/ /entrypoint.sh && bash /entrypoint.sh && sudo rosdep init || sudo rosdep update --include-eol-distros && sudo rosdep install --from-paths ws/src --ignore-src -y' || true"
+}
