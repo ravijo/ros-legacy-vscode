@@ -7,6 +7,10 @@
 # Ignore everything inside ws/src
 ws/src/*
 
+# Ignore catkin build folders
+ws/build/
+ws/devel/
+
 # But keep the .gitkeep file to preserve the directory structure
 !ws/src/.gitkeep
 
