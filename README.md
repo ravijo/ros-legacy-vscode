@@ -71,6 +71,8 @@ Ensure your directory structure matches the following:
 │   ├── devcontainer.json
 │   ├── Dockerfile
 │   └── entrypoint.sh
+├── files
+│   └── demo.gif
 ├── .gitignore
 ├── LICENSE
 ├── README.md
@@ -175,7 +177,7 @@ ros-legacy-vscode/
 
 ### VS Code Extensions
 
-The following extensions are installed on Host PC in VS Code:
+The following extensions are installed in VS Code on the host PC:
 ```bash
 ms-vscode-remote.remote-containers@0.434.0
 ms-vscode-remote.remote-ssh@0.122.0
@@ -202,10 +204,11 @@ If you encounter any problems or have suggestions, please [open an issue](https:
 
 ## References
 
-- [old-linux-vscode](https://github.com/naitaku/old-linux-vscode) - Inspiration for this project
+- [Old Linux VS Code](https://github.com/naitaku/old-linux-vscode) - Inspiration for this project
 - [VS Code Remote Development](https://code.visualstudio.com/docs/remote/containers) - Official documentation
 - [VS Code Server FAQ](https://code.visualstudio.com/docs/remote/faq#_can-i-run-vs-code-server-on-older-linux-distributions) - Compatibility information
 - [ROS Melodic Documentation](http://wiki.ros.org/melodic)
+- [VS Code Sysroot](https://github.com/ursetto/vscode-sysroot)
 
 ## License
 
